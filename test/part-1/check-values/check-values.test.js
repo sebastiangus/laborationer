@@ -1,4 +1,4 @@
-var hello = require("../../../src/part-1/hello-world/hello-world");
+var hello = require("../.././hello-world");
 var expect = require("chai").expect;
 
 describe("Test the function sayHello", function() {
