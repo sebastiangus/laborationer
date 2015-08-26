@@ -37,7 +37,7 @@ exports.concater = function() {
 };
 
 /**
- * Returns the rounded (avrundade) result of an sum
+ * Returns the rounded integer (avrundade heltalet) as sum of two decimal numbers
  * @returns {Number}
  */
 exports.round = function() {
@@ -46,7 +46,8 @@ exports.round = function() {
     var a = 12.24;
     var b = 12.27;
 
-    // Your code here
+    // Your code here should return 25
+    return a + b;
 
 };
 
@@ -71,6 +72,18 @@ exports.middleCharacter = function(word) {
 exports.findHash = function(tweet) {
 
     // your code here
+
+};
+
+/**
+ * This function returns a string holding all odd number from zero to the parameter "limit"
+ * Ex. if limit is 10 it should return the string "13579"
+ * @param {number} limit - A positive number
+ * @returns {string}
+ */
+exports.getOdd = function(limit) {
+
+    // Your code here
 
 };
 
@@ -126,7 +139,7 @@ exports.simpleReplaceWithWhileLoop = function(phrase) {
 exports.firstThree = function() {
 
     // Your code here
-}
+};
 
 /**
  * The rövarspråket(robberlanguage) - https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket
@@ -134,7 +147,7 @@ exports.firstThree = function() {
  * an encrypted string by after every consonant adding a "o" and that consonant again.
  * The return string will always be lowercase!
  * The function uses a switch -statement.
- * Ex. "fint" becomes "fofinontot"
+ * Ex. "fint" becomes "fofinontot" and "rövarspråket" becomes "rorövovarorsospoproråkoketot"
  * @param {string} phrase
  * @returns {string} - The encrypted string - in lower case
  */

@@ -25,6 +25,86 @@ describe("Test round()", function() {
 
 });
 
+describe("Test middleCharacter()", function() {
+    it("middleCharacter(\"car\"); should return \"a\"", function(done) {
+        expect(t.middleCharacter("car")).to.eql("a");
+        done();
+    });
+
+    it("middleCharacter(\"stuff\"); should return \"u\"", function(done) {
+        expect(t.middleCharacter("stuff")).to.eql("u");
+        done();
+    });
+
+    it("middleCharacter(\"rhinos\"); should return \"in\"", function(done) {
+        expect(t.middleCharacter("rhinos")).to.eql("in");
+        done();
+    });
+
+    it("middleCharacter(\"longstring\"); should return \"st\"", function(done) {
+        expect(t.middleCharacter("longstring")).to.eql("st");
+        done();
+    });
+});
+
+describe("Test findHash()", function() {
+    it("findHash(\"Hello World!#starting\"); should return \"starting\"", function(done) {
+        expect(t.findHash("Hello World!#starting")).to.eql("starting");
+        done();
+    });
+
+    it("findHash(\"#starting\"); should return \"starting\"", function(done) {
+        expect(t.findHash("#starting")).to.eql("starting");
+        done();
+    });
+
+    it("findHash(\"starting\"); should return \"starting\"", function(done) {
+        expect(t.findHash("starting")).to.eql("");
+        done();
+    });
+
+    it("findHash(\"empty hash in this tweet#\"); should return \"\"", function(done) {
+        expect(t.findHash("empty hash in this tweet#")).to.eql("");
+        done();
+    });
+
+    it("findHash(\"\"); should return \"\"", function(done) {
+        expect(t.findHash("")).to.eql("");
+        done();
+    });
+
+});
+
+describe("Test getOdd", function() {
+
+    it("getOdd(10) should return 13579", function(done) {
+        expect(t.getOdd(10)).to.eql("13579");
+        done();
+    });
+
+    it("getOdd(1) should return 1", function(done) {
+        expect(t.getOdd(1)).to.eql("1");
+        done();
+    });
+
+    it("getOdd(0) should return 13579", function(done) {
+        expect(t.getOdd(0)).to.eql("");
+        done();
+    });
+
+    it("getOdd(25) should return 135791113151719212325", function(done) {
+        expect(t.getOdd(25)).to.eql("135791113151719212325");
+        done();
+    });
+});
+
+describe("Test greetings()", function() {
+    it("greetings(); should return right message", function(done) {
+        // no test for this one
+        done();
+    });
+});
+
 describe("Test simpleReplaceWithForLoop()", function() {
     it("simpleReplaceWithForLoop(\"Hello-World!\") should return \"Hello World!\"", function(done) {
         expect(t.simpleReplaceWithForLoop("Hello-World!")).to.eql("Hello World!");
@@ -64,6 +144,14 @@ describe("Test simpleReplaceWithWhileLoop()", function() {
     });
 });
 
+describe("Test firstThree", function() {
+    var result = "11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53";
+    it("firstThree() should return " + result, function(done) {
+        expect(t.firstThree()).to.eql(result);
+        done();
+    });
+});
+
 describe("Test robberLanguageEncrypter()", function() {
     it("robberLanguageEncrypter(\"fint!\") should return \"fofinontot\"", function(done) {
         expect(t.robberLanguageEncrypter("fint")).to.eql("fofinontot");
@@ -77,71 +165,6 @@ describe("Test robberLanguageEncrypter()", function() {
 
     it("robberLanguageEncrypter(\"aeiouåäö!\") should return \"aeiouåäö\"", function(done) {
         expect(t.robberLanguageEncrypter("aeiouåäö")).to.eql("aeiouåäö");
-        done();
-    });
-});
-
-describe("Test greetings()", function() {
-    it("greetings(); should return right message", function(done) {
-        // no test for this one
-        done();
-    });
-});
-
-describe("Test findHash()", function() {
-    it("findHash(\"Hello World!#starting\"); should return \"starting\"", function(done) {
-        expect(t.findHash("Hello World!#starting")).to.eql("starting");
-        done();
-    });
-
-    it("findHash(\"#starting\"); should return \"starting\"", function(done) {
-        expect(t.findHash("#starting")).to.eql("starting");
-        done();
-    });
-
-    it("findHash(\"starting\"); should return \"starting\"", function(done) {
-        expect(t.findHash("starting")).to.eql("");
-        done();
-    });
-
-    it("findHash(\"empty hash in this tweet#\"); should return \"\"", function(done) {
-        expect(t.findHash("empty hash in this tweet#")).to.eql("");
-        done();
-    });
-
-    it("findHash(\"\"); should return \"\"", function(done) {
-        expect(t.findHash("")).to.eql("");
-        done();
-    });
-
-});
-
-describe("Test middleCharacter()", function() {
-    it("middleCharacter(\"car\"); should return \"a\"", function(done) {
-        expect(t.middleCharacter("car")).to.eql("a");
-        done();
-    });
-
-    it("middleCharacter(\"stuff\"); should return \"u\"", function(done) {
-        expect(t.middleCharacter("stuff")).to.eql("u");
-        done();
-    });
-
-    it("middleCharacter(\"rhinos\"); should return \"in\"", function(done) {
-        expect(t.middleCharacter("rhinos")).to.eql("in");
-        done();
-    });
-
-    it("middleCharacter(\"longstring\"); should return \"st\"", function(done) {
-        expect(t.middleCharacter("longstring")).to.eql("st");
-        done();
-    });
-});
-
-describe("Test firstThree", function() {
-    var result = "11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53";
-    it("firstThree() should return " +result, function(done) {
-        expect(t.firstThree()).to.eql(result);
         done();
     });
 });
