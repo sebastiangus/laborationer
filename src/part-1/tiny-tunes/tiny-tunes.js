@@ -17,8 +17,8 @@ exports.add = function() {
     var a = 12;
     var b = "12";
 
-    // Your code here
-    return a + Number(b);
+    // Your code here - change the code under to make the test go green
+    return a + b;
 };
 
 /**
@@ -33,7 +33,7 @@ exports.concater = function() {
     var weeks = "weeks";
 
     // Your code here
-    return message + " " + time + " " + weeks;
+
 };
 
 /**
@@ -47,7 +47,7 @@ exports.round = function() {
     var b = 12.27;
 
     // Your code here
-    return Math.round(a + b);
+
 };
 
 /**
@@ -57,14 +57,9 @@ exports.round = function() {
  * @returns {string} - A string containing the middle character(s)
  */
 exports.middleCharacter = function(word) {
-    var length = word.length;
 
-    var result = word.charAt(length / 2);
-    if (length % 2 === 0) {
-        result = word.charAt((length / 2) - 1) + result;
-    }
+    // your code here
 
-    return result;
 };
 
 /**
@@ -74,12 +69,9 @@ exports.middleCharacter = function(word) {
  * @returns {string} - The hashtag (excluding the #-caracter)
  */
 exports.findHash = function(tweet) {
-    var index = tweet.indexOf("#");
-    if (index > -1) {
-        return tweet.slice(index + 1);
-    }
 
-    return "";
+    // your code here
+
 };
 
 /**
@@ -93,20 +85,12 @@ exports.findHash = function(tweet) {
  * @returns {Number}
  */
 exports.greetings = function() {
-    var hour = new Date().hour;
 
     var message = "";
 
-    if (hour >= 8 && hour < 12) {
-        message = "Good morning!";
-    } else if (hour >= 12 && hour <= 18) {
-        message = "Good afternoon!";
-    }else if (hour > 18 && hour <= 24) {
-        message = "Good evening!";
-    } else {
-        message = "Good night!";
-    }
+    // your code here
 
+    // no tests to this. Run "node app.js" to se the console.log
     console.log(message);
 };
 
@@ -117,19 +101,9 @@ exports.greetings = function() {
  * @returns {string} - The string whit all "-"-characters replaced with " "
  */
 exports.simpleReplaceWithForLoop = function(phrase) {
-    var length = phrase.length;
-    var result = "";
-    for (var i = 0; i < length; i++) {
-        var char = phrase.charAt(i);
-        if (char === "-") {
-            result += " ";
-            continue;
-        }
 
-        result += char;
-    }
+    // your code here
 
-    return result;
 };
 
 /**
@@ -139,55 +113,23 @@ exports.simpleReplaceWithForLoop = function(phrase) {
  * @returns {string} - The string whit all "-"-characters replaced with " "
  */
 exports.simpleReplaceWithWhileLoop = function(phrase) {
-    var length = phrase.length;
-    var result = "";
-    var i = 0;
-    while (i < length) {
-        var char = phrase.charAt(i);
-        i++;
-        if (char === "-") {
-            result += " ";
-            continue;
-        }
 
-        result += char;
+    // your code here
 
-    }
-
-    return result;
 };
 
 /**
  * The rövarspråket(robberlanguage) - https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket
  * is a simple crypt algorithm. This function takes a phrase and translates it to
  * an encrypted string by after every consonant adding a "o" and that consonant again.
+ * The return string will always be lowercase!
  * The function uses a switch -statement.
  * Ex. "fint" becomes "fofinontot"
  * @param {string} phrase
- * @returns {string}
+ * @returns {string} - The encrypted string - in lower case
  */
 exports.robberLanguageEncrypter = function(phrase) {
-    phrase = phrase.toLowerCase();
-    var length = phrase.length;
-    var result = "";
-    for (var i = 0; i < length; i++) {
-        var char = phrase.charAt(i);
-        switch (char) {
-            case "a":
-            case "e":
-            case "i":
-            case "o":
-            case "u":
-            case "å":
-            case "ä":
-            case "ö":
-                result += char;
-                break;
-            default:
-                result += char + "o" + char;
-                break;
-        }
-    }
 
-    return result;
+    // your code here
+
 };
