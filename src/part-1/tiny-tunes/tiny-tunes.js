@@ -119,6 +119,16 @@ exports.simpleReplaceWithWhileLoop = function(phrase) {
 };
 
 /**
+ * This function creates a string by using nested for-loops that is equal to
+ * "11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53"
+ * @returns {string} - That is 11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53
+ */
+exports.firstThree = function() {
+
+    // Your code here
+}
+
+/**
  * The rövarspråket(robberlanguage) - https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket
  * is a simple crypt algorithm. This function takes a phrase and translates it to
  * an encrypted string by after every consonant adding a "o" and that consonant again.

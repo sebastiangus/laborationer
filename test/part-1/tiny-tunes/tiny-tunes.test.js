@@ -137,3 +137,11 @@ describe("Test middleCharacter()", function() {
         done();
     });
 });
+
+describe("Test firstThree", function() {
+    var result = "11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53";
+    it("firstThree() should return " +result, function(done) {
+        expect(t.firstThree()).to.eql(result);
+        done();
+    });
+});
