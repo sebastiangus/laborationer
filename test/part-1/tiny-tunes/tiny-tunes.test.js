@@ -25,6 +25,61 @@ describe("Test round()", function() {
 
 });
 
+describe("Test simpleReplaceWithForLoop()", function() {
+    it("simpleReplaceWithForLoop(\"Hello-World!\") should return \"Hello World!\"", function(done) {
+        expect(t.simpleReplaceWithForLoop("Hello-World!")).to.eql("Hello World!");
+        done();
+    });
+
+    it("simpleReplaceWithForLoop(\"Hello-JavaScript-World!\") should return \"Hello Javascript World!\"", function(done) {
+        expect(t.simpleReplaceWithForLoop("Hello-JavaScript-World!")).to.eql("Hello JavaScript World!");
+        done();
+    });
+
+    it("simpleReplaceWithForLoop(\"Hello World!\") should return \"Hello World!\"", function(done) {
+        expect(t.simpleReplaceWithForLoop("Hello World!")).to.eql("Hello World!");
+        done();
+    });
+});
+
+describe("Test simpleReplaceWithWhileLoop()", function() {
+    it("simpleReplaceWithWhileLoop(\"Hello-World!\") should return \"Hello World!\"", function(done) {
+        expect(t.simpleReplaceWithWhileLoop("Hello-World!")).to.eql("Hello World!");
+        done();
+    });
+
+    it("simpleReplaceWithWhileLoop(\"Hello-JavaScript-World!\") should return \"Hello Javascript World!\"", function(done) {
+        expect(t.simpleReplaceWithWhileLoop("Hello-JavaScript-World!")).to.eql("Hello JavaScript World!");
+        done();
+    });
+
+    it("simpleReplaceWithWhileLoop(\"Hello World!\") should return \"Hello World!\"", function(done) {
+        expect(t.simpleReplaceWithWhileLoop("Hello World!")).to.eql("Hello World!");
+        done();
+    });
+
+    it("simpleReplaceWithWhileLoop(\"-Hello-World-!-\") should return \" Hello World ! \"", function(done) {
+        expect(t.simpleReplaceWithWhileLoop("-Hello-World-!-")).to.eql(" Hello World ! ");
+        done();
+    });
+});
+
+describe("Test robberLanguageEncrypter()", function() {
+    it("robberLanguageEncrypter(\"fint!\") should return \"fofinontot\"", function(done) {
+        expect(t.robberLanguageEncrypter("fint")).to.eql("fofinontot");
+        done();
+    });
+
+    it("robberLanguageEncrypter(\"Rövarspråket\") should return \"rorövovarorsospoproråkoketot\"", function(done) {
+        expect(t.robberLanguageEncrypter("Rövarspråket")).to.eql("rorövovarorsospoproråkoketot");
+        done();
+    });
+
+    it("robberLanguageEncrypter(\"aeiouåäö!\") should return \"aeiouåäö\"", function(done) {
+        expect(t.robberLanguageEncrypter("aeiouåäö")).to.eql("aeiouåäö");
+        done();
+    });
+});
 
 describe("Test greetings()", function() {
     it("greetings(); should return right message", function(done) {
