@@ -142,11 +142,11 @@ exports.firstThree = function() {
 };
 
 /**
- * The rövarspråket(robberlanguage) - https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket
+ * The rövarspråket(robber language) - https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket
  * is a simple crypt algorithm. This function takes a phrase and translates it to
  * an encrypted string by after every consonant adding a "o" and that consonant again.
  * The return string will always be lowercase!
- * The function uses a switch -statement.
+ * The function uses a switch-statement!
  * Ex. "fint" becomes "fofinontot" and "rövarspråket" becomes "rorövovarorsospoproråkoketot"
  * @param {string} phrase
  * @returns {string} - The encrypted string - in lower case
@@ -154,5 +154,28 @@ exports.firstThree = function() {
 exports.robberLanguageEncrypter = function(phrase) {
 
     // your code here
+
+};
+
+/**
+ * This function takes 2-4 parameters described below.
+ * The function check that all parameters är valid data type and
+ * concats a valid URL of the parameters ex.
+ * domain = "lnu.se"
+ * page = "program/webbprogrammerare"
+ * isSecure = true (sets https if true otherwise http)
+ * port = 8080
+ * => https://lnu.se:8080/program/webbprogrammerare
+ *
+ * @param {string} domain - The domain name in the URL
+ * @param {string} path - The path in the URL
+ * @param [isSecure = false] - if true the protocol is https otherwise http
+ * @param [port = ""] - The port number of the URL
+ * @returns {string} - Returns the valid URL string. If the call missing parameters (the two fist) or
+ * have bad data type the function returns the string "Incorrect parameters"
+ */
+exports.makeURL = function(domain, path, isSecure, port) {
+
+    // Your code here
 
 };

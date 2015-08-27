@@ -168,3 +168,73 @@ describe("Test robberLanguageEncrypter()", function() {
         done();
     });
 });
+
+describe("Test makeURL()", function() {
+    it("makeURL(\"lnu.se\", \"program/webbprogrammerare\", true, 8080) should" +
+        " return \"https://lnu.se:8080/program/webbprogrammerare/\"", function(done) {
+
+        expect(t.makeURL("lnu.se", "/program/webbprogrammerare", true, 8080))
+            .to.eql("https://lnu.se:8080/program/webbprogrammerare/");
+        done();
+
+
+    });
+
+
+    it("makeURL(\"lnu.se\", \"program/webbprogrammerare\", false) should" +
+        " return \"https://lnu.se:8080/program/webbprogrammerare/\"", function(done) {
+        expect(t.makeURL("lnu.se", "/program/webbprogrammerare", false))
+            .to.eql("http://lnu.se/program/webbprogrammerare/");
+        done();
+
+    });
+
+    it("makeURL(\"lnu.se\", \"program/webbprogrammerare\") should" +
+        " return \"https://lnu.se:8080/program/webbprogrammerare/\"", function(done) {
+        expect(t.makeURL("lnu.se", "/program/webbprogrammerare"))
+            .to.eql("http://lnu.se/program/webbprogrammerare/");
+        done();
+    });
+
+    it("makeURL(\"lnu.se\") should" +
+        " return \"Incorrect parameters\"", function(done) {
+        expect(t.makeURL("lnu.se"))
+            .to.eql("Incorrect parameters");
+        done();
+    });
+
+    it("makeURL() should" +
+        " return \"Incorrect parameters\"", function(done) {
+        expect(t.makeURL())
+            .to.eql("Incorrect parameters");
+        done();
+    });
+
+    it("makeURL(12) should" +
+        " return \"Incorrect parameters\"", function(done) {
+        expect(t.makeURL(12))
+            .to.eql("Incorrect parameters");
+        done();
+    });
+
+    it("makeURL('lnu.se', 12) should" +
+        " return \"Incorrect parameters\"", function(done) {
+        expect(t.makeURL("lnu.se", 12))
+            .to.eql("Incorrect parameters");
+        done();
+    });
+
+    it("makeURL('lnu.se', 'program/webbprogrammerare', 'blaj') should" +
+        " return \"Incorrect parameters\"", function(done) {
+        expect(t.makeURL("lnu.se", "webbprogrammerare", "blaj"))
+            .to.eql("Incorrect parameters");
+        done();
+    });
+
+    it("makeURL('lnu.se', 'program/webbprogrammerare', true, 'blaj') should" +
+        " return \"Incorrect parameters\"", function(done) {
+        expect(t.makeURL("lnu.se", "webbprogrammerare", true, "blaj"))
+            .to.eql("Incorrect parameters");
+        done();
+    });
+});
