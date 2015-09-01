@@ -58,7 +58,7 @@ describe("Test findHash()", function() {
         done();
     });
     it("findHash(\"I'm doing great #success!\"); should return \"success!\"", function(done) {
-        expect(t.findHash("I'm doing great #success!")).to.eql("#success!");
+        expect(t.findHash("I'm doing great #success!")).to.eql("success!");
         done();
     });
 
