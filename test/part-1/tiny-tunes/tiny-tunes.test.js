@@ -57,8 +57,12 @@ describe("Test findHash()", function() {
         expect(t.findHash("#starting")).to.eql("starting");
         done();
     });
+    it("findHash(\"I'm doing great #success!\"); should return \"success!\"", function(done) {
+        expect(t.findHash("I'm doing great #success!")).to.eql("#success!");
+        done();
+    });
 
-    it("findHash(\"starting\"); should return \"starting\"", function(done) {
+    it("findHash(\"starting\"); should return \"\"", function(done) {
         expect(t.findHash("starting")).to.eql("");
         done();
     });
@@ -87,7 +91,7 @@ describe("Test getOdd", function() {
         done();
     });
 
-    it("getOdd(0) should return 13579", function(done) {
+    it("getOdd(0) should return ''", function(done) {
         expect(t.getOdd(0)).to.eql("");
         done();
     });

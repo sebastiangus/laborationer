@@ -18,6 +18,7 @@ exports.add = function() {
     var b = "12";
 
     // Your code here - change the code under to make the test go green
+    // The problem is to change så that variables a and b both become of data type "Number"
     return a + b;
 };
 
@@ -32,8 +33,10 @@ exports.concater = function() {
     var time = 10;
     var weeks = "weeks";
 
-    // Your code here
+    // Your code here - ofcourse you should use the above variables to make the string
+    // to return
 
+    return "";
 };
 
 /**
@@ -47,25 +50,35 @@ exports.round = function() {
     var b = 12.27;
 
     // Your code here should return 25
+    // the variables should be used in the calculation
     return a + b;
 
 };
 
 /**
- * This function takes a word and find the middle character or, if the word have a even length,
+ * This function takes a word as parameter and finds the middle character or, if the word have a even length,
  * the two middle characters
+ * Ex. "car" should return the character "a"
+ * Ex. "cars" should return the caracters "ar"
+ * Ex. "rhinos" should return the characters "in"
  * @param {string} word - A word with 3 or more characters
  * @returns {string} - A string containing the middle character(s)
  */
 exports.middleCharacter = function(word) {
+
+    // this function will be called by the tests in /test/tiny-tunes/tiny-tunes-test.js
+    // the variable/parameter "word" will be a different string each time so your
+    // code should work for each call/test
 
     // your code here
 
 };
 
 /**
- * This function returns finds and return a hash tag in a string. If no hash-tag is provided
- * a empty string is returned. Ex. "Hello! #cheers" will return "cheers"
+ * This function finds and return a hash tag in a string. If no hash tag is provided
+ * a empty string is returned.
+ * Ex. "Hello! #cheers" will return "cheers"
+ * Ex. "I'm doing great #success! will return "success!"
  * @param {string} tweet - The tweet that can include one (and only one) hash-tag
  * @returns {string} - The hashtag (excluding the #-caracter)
  */
@@ -77,7 +90,9 @@ exports.findHash = function(tweet) {
 
 /**
  * This function returns a string holding all odd number from zero to the parameter "limit"
- * Ex. if limit is 10 it should return the string "13579"
+ * Ex. if limit is 10 it should return the string "13579" because the numbers 1, 3, 5, 7 and 9 are
+ * odd numbers that we found up to the number 10 (limit)
+ * Ex. if limit is 3 it should return "13"
  * @param {number} limit - A positive number
  * @returns {string}
  */
@@ -89,7 +104,8 @@ exports.getOdd = function(limit) {
 
 /**
  * Writes a greeting message to the console depending on what time
- * it is.
+ * it is. The function use javascript to get the current time.
+ *
  * If hour is between 8 and 11 the message should be "Good morning!"
  * If hour is between 12 and 18 the message should be "Good afternoon!"
  * If hour is between 19 and 24 the message should be "Good evning!"
@@ -100,6 +116,7 @@ exports.getOdd = function(limit) {
 exports.greetings = function() {
 
     var message = "";
+    var hour = new Date().hour; // hour will be set by the system clock use it in your code
 
     // your code here
 
@@ -110,6 +127,7 @@ exports.greetings = function() {
 /**
  * This function takes a string and replaces all "-" with " "
  * using a simple for-loop
+ * Ex. if phrase is "Hello-World!" the function should return "Hello World!"
  * @param {string} phrase - The phrase to control
  * @returns {string} - The string whit all "-"-characters replaced with " "
  */
@@ -132,9 +150,9 @@ exports.simpleReplaceWithWhileLoop = function(phrase) {
 };
 
 /**
- * This function creates a string by using nested for-loops that is equal to
- * "11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53"
- * @returns {string} - That is 11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53
+ * This function creates a string that is equal to
+ * "11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53" by using two nested for-loops!
+ * * @returns {string} - That is 11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53
  */
 exports.firstThree = function() {
 
